@@ -2,6 +2,14 @@
 {
     internal class Program
     {
+        void A()
+        {
+            var a = 2;
+            Console.WriteLine(a);
+            Console.WriteLine(a+1);
+            Console.WriteLine();
+            Console.ReadLine();
+        }
         static void Main(string[] args)
         {
             //STEP 1

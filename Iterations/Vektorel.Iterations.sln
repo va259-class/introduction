@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.Sample1", "Vektorel.Sample1\Vektorel.Sample1.csproj", "{1C8D9F17-4DF4-4C77-87D3-2B75DE534E92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.Sample1", "Vektorel.Sample1\Vektorel.Sample1.csproj", "{1C8D9F17-4DF4-4C77-87D3-2B75DE534E92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.LoopKinds", "Vektorel.LoopKinds\Vektorel.LoopKinds.csproj", "{0FF58A08-6BE4-4889-93CE-D2E717F5A324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.DoSample", "Vektorel.DoSample\Vektorel.DoSample.csproj", "{2F498864-3FE7-4EAD-B778-D75E5727CA43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1C8D9F17-4DF4-4C77-87D3-2B75DE534E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C8D9F17-4DF4-4C77-87D3-2B75DE534E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C8D9F17-4DF4-4C77-87D3-2B75DE534E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FF58A08-6BE4-4889-93CE-D2E717F5A324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF58A08-6BE4-4889-93CE-D2E717F5A324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF58A08-6BE4-4889-93CE-D2E717F5A324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF58A08-6BE4-4889-93CE-D2E717F5A324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F498864-3FE7-4EAD-B778-D75E5727CA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F498864-3FE7-4EAD-B778-D75E5727CA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F498864-3FE7-4EAD-B778-D75E5727CA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F498864-3FE7-4EAD-B778-D75E5727CA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

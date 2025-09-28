@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.BasicArrays", "Vektorel.BasicArrays\Vektorel.BasicArrays.csproj", "{91368C56-42B7-4735-8F87-1045C6C6FE08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.EvenNumberArray", "Vektorel.EvenNumberArray\Vektorel.EvenNumberArray.csproj", "{30BE63A6-2837-4F6A-858E-04C8EA7CD18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.CompareItems", "Vektorel.CompareItems\Vektorel.CompareItems.csproj", "{0327C3DC-1E3C-44F7-B423-1361BE86AF01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{91368C56-42B7-4735-8F87-1045C6C6FE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91368C56-42B7-4735-8F87-1045C6C6FE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91368C56-42B7-4735-8F87-1045C6C6FE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BE63A6-2837-4F6A-858E-04C8EA7CD18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BE63A6-2837-4F6A-858E-04C8EA7CD18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BE63A6-2837-4F6A-858E-04C8EA7CD18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BE63A6-2837-4F6A-858E-04C8EA7CD18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0327C3DC-1E3C-44F7-B423-1361BE86AF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0327C3DC-1E3C-44F7-B423-1361BE86AF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0327C3DC-1E3C-44F7-B423-1361BE86AF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0327C3DC-1E3C-44F7-B423-1361BE86AF01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

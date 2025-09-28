@@ -29,38 +29,33 @@
             Console.WriteLine("Ekranı temizlemek için Enter'a basınız");
             Console.ReadLine();
             Console.Clear();
+            var entryNumbers = new int[7]; // 5 sayı kapasiteli bir sayı dizisi
             Console.WriteLine("5 Adet Sayı Giriniz");
-            Console.Write("1. Sayıyı Giriniz.....: ");
-            num1 = int.Parse(Console.ReadLine());
-            Console.Write("2. Sayıyı Giriniz.....: ");
-            num2 = int.Parse(Console.ReadLine());
-            Console.Write("3. Sayıyı Giriniz.....: ");
-            num3 = int.Parse(Console.ReadLine());
-            Console.Write("4. Sayıyı Giriniz.....: ");
-            num4 = int.Parse(Console.ReadLine());
-            Console.Write("5. Sayıyı Giriniz.....: ");
-            num5 = int.Parse(Console.ReadLine());
 
-            #region Onlardan Olma!
-            if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5)
+            for (var i = 0; i < entryNumbers.Length; i++)
             {
-                Console.WriteLine("En Büyük " + num1);
+                Console.Write((i + 1) + ". Sayıyı Giriniz.....: ");
+                entryNumbers[i] = int.Parse(Console.ReadLine());
             }
-            if (num2 > num3 && num2 > num4 && num2 > num5)
-            {
-                Console.WriteLine("En Büyük " + num2);
-            }
-            if (num3 > num4 && num3 > num5)
-            {
-                Console.WriteLine("En Büyük " + num3);
-            }
-            if (num4 > num5)
-            {
-                Console.WriteLine("En Büyük " + num4);
-            }
-            #endregion
 
+            var max = 0;
+            for (int i = 0; i < entryNumbers.Length; i++)
+            {
+                if (entryNumbers[i] > max)
+                {
+                    max = entryNumbers[i];
+                }
+            }
 
+            Console.WriteLine("Girilen En Büyük Sayı :" + max);
+
+            //Ödev
+            var unOrderedNumbers = new int[]
+            {
+                12, 24, 1, 6, 98, 23, 6, 13, 25, 36, 8
+            };
+
+            // 1, 6, 6, 8, 12, 13, 24, 25, 36, 98
         }
     }
 }

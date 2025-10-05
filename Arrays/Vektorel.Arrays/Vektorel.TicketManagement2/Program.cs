@@ -1,28 +1,12 @@
-﻿namespace Vektorel.TicketManagement
+﻿// IEnumerable
+namespace Vektorel.TicketManagement2
 {
     internal class Program
     {
-        static int busIndex = 0;
-        static Bus[] buses = new Bus[10];
+        static List<Bus> buses = new List<Bus>();
         static void Main(string[] args)
         {
             ShowWelcomeScreen();
-        }
-
-        static void Print(Bus bus)
-        {
-            Console.WriteLine(bus.Plate + " yolcu listesi\n");
-            var index = 0;
-            foreach (var passenger in bus.GetPassengers())
-            {
-                index++;
-                if (passenger == null)
-                {
-                    continue;
-                }
-                Console.WriteLine("{0}. Koltuk - {1}", index, passenger.FullName);
-                //Console.WriteLine(index + ". Koltuk - " + passenger.FullName);
-            }
         }
 
         static void ShowWelcomeScreen()
@@ -74,44 +58,31 @@
             } while (true);
         }
 
-        static void ListBuses()
+        static void ListBuses() 
         {
             Console.Clear();
             Console.WriteLine("OTOBÜS LİSTESİ");
             foreach (var bus in buses)
             {
-                if (bus == null)
-                {
-                    continue;
-                }
                 Console.WriteLine("Plaka : {0}", bus.Plate);
             }
             Console.ReadLine();
         }
-
-        static void AddBus()
+        static void AddBus() 
         {
             Console.Clear();
-            if (busIndex == buses.Length)
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Garajda yeterli alan yok");
-                Console.ReadLine();
-                return;
-            }
             var bus = new Bus();
             Console.Write("Plaka Giriniz................: ");
             bus.Plate = Console.ReadLine();
             Console.Write("Koltuk Sayısı Giriniz........: ");
             bus.Capacity = byte.Parse(Console.ReadLine());
             bus.Create();
-            buses[busIndex++] = bus;
+            buses.Add(bus);
 
             Console.WriteLine("Otobüs Eklendi");
             Console.ReadLine();
         }
-
-        static void ListPassengers()
+        static void ListPassengers() 
         {
             Console.Clear();
             var bus = FindBus();
@@ -133,8 +104,7 @@
             }
             Console.ReadLine();
         }
-
-        static void AddPassenger()
+        static void AddPassenger() 
         {
             Console.Clear();
             var bus = FindBus();
@@ -147,38 +117,19 @@
             Console.Write("Yolcu Adı Soyadı.......: ");
             var fullName = Console.ReadLine();
             SetPassengers(bus, seat, fullName);
-
         }
-
-        static void RemovePassenger()
+        static void RemovePassenger() 
         {
-
-        }
-
-        /// <summary>
-        /// Tanımlı bir otobüsün seçili koltuğuna yolcu yerleştirmek için kullanılır
-        /// </summary>
-        /// <param name="bus">önceden tanımlanmış otobüs</param>
-        /// <param name="seat">koltuk numarası</param>
-        /// <param name="fullName">yolcu adı ve soyadı</param>
-        static void SetPassengers(Bus bus, byte seat, string fullName)
-        {
-            var p = new Passenger();
-            p.FullName = fullName;
-            bus.Register(p, seat);
+            //list Remove methoduna bakınız
         }
 
         static Bus FindBus()
         {
             Console.Write("Yolcunun Kullanacağı Otobüs Plakası...: ");
             var plate = Console.ReadLine();
+            //return buses.Find(x => x.Plate == plate); // İLERİDE :D
             foreach (var bus in buses)
             {
-                if (bus == null)
-                {
-                    continue;
-                }
-
                 if (bus.Plate == plate)
                 {
                     return bus;
@@ -190,19 +141,11 @@
             return null;
         }
 
-        static int GetNum()
+        static void SetPassengers(Bus bus, byte seat, string fullName)
         {
-            return 12;
-        }
-
-        static bool GetStatus()
-        {
-            return true;
-        }
-
-        static string GetName()
-        {
-            return "Can";
+            var p = new Passenger();
+            p.FullName = fullName;
+            bus.Register(p, seat);
         }
     }
 }

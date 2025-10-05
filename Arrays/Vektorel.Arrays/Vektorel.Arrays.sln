@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.EvenNumberArray", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.CompareItems", "Vektorel.CompareItems\Vektorel.CompareItems.csproj", "{0327C3DC-1E3C-44F7-B423-1361BE86AF01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.BasicSortOperation", "Vektorel.BasicSortOperation\Vektorel.BasicSortOperation.csproj", "{E52AE8C3-AF95-497D-9302-F35D68A6CA8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.BasicSortOperation", "Vektorel.BasicSortOperation\Vektorel.BasicSortOperation.csproj", "{E52AE8C3-AF95-497D-9302-F35D68A6CA8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.TicketManagement", "Vektorel.TicketManagement\Vektorel.TicketManagement.csproj", "{BEF49C7D-AE33-411C-BC03-1C33A51151D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vektorel.TicketManagement", "Vektorel.TicketManagement\Vektorel.TicketManagement.csproj", "{BEF49C7D-AE33-411C-BC03-1C33A51151D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.TicketManagement2", "Vektorel.TicketManagement2\Vektorel.TicketManagement2.csproj", "{95EF1880-BE7F-4DBA-A508-5F9BBA49CB0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BEF49C7D-AE33-411C-BC03-1C33A51151D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEF49C7D-AE33-411C-BC03-1C33A51151D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEF49C7D-AE33-411C-BC03-1C33A51151D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95EF1880-BE7F-4DBA-A508-5F9BBA49CB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95EF1880-BE7F-4DBA-A508-5F9BBA49CB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95EF1880-BE7F-4DBA-A508-5F9BBA49CB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95EF1880-BE7F-4DBA-A508-5F9BBA49CB0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

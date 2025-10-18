@@ -6,7 +6,7 @@ namespace Vektorel.BasicFormSample
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new JumpingText());
+            Application.Run(new FormSlider());
         }
     }
 }

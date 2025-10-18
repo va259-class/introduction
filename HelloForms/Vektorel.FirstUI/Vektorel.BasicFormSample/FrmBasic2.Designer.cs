@@ -43,6 +43,7 @@
             label1 = new Label();
             txtNumber2 = new TextBox();
             txtNumber1 = new TextBox();
+            btnPow = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnPow);
             groupBox2.Controls.Add(txtResult);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(btnDivide);
@@ -191,6 +193,16 @@
             txtNumber1.Size = new Size(95, 23);
             txtNumber1.TabIndex = 0;
             // 
+            // btnPow
+            // 
+            btnPow.Location = new Point(155, 120);
+            btnPow.Name = "btnPow";
+            btnPow.Size = new Size(28, 23);
+            btnPow.TabIndex = 10;
+            btnPow.Text = "P";
+            btnPow.UseVisualStyleBackColor = true;
+            btnPow.Click += btnPow_Click;
+            // 
             // FrmBasic2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -227,5 +239,6 @@
         private Button btnSubtract;
         private TextBox txtResult;
         private Label label3;
+        private Button btnPow;
     }
 }

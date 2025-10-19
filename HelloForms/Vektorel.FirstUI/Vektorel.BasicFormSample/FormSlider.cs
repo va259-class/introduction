@@ -18,17 +18,40 @@ namespace Vektorel.BasicFormSample
         }
 
         int value = 0;
+        Direction direction = Direction.Right;
 
         private void tmr_Tick(object sender, EventArgs e)
         {
             textBox1.Text = (value++).ToString();
+            MovePlayer();
+        }
+
+        void MovePlayer()
+        {
+            if (direction == Direction.Right)
+            {
+                btnPlayer.Left += 5;
+                // this bulunduğumuz class demek
+                if (btnPlayer.Left >= this.Width - 20 - btnPlayer.Width)
+                {
+                    direction = Direction.Left;
+                }
+            }
+            else
+            {
+                btnPlayer.Left -= 5;
+                if (btnPlayer.Left <= 0)
+                {
+                    direction = Direction.Right;
+                }
+            }
         }
 
         private void btnIncrease_Click(object sender, EventArgs e)
         {
-            if (tmr.Interval > 100)
+            if (tmr.Interval > 50)
             {
-                tmr.Interval -= 100;
+                tmr.Interval -= 50;
             }
             else
             {
@@ -38,8 +61,14 @@ namespace Vektorel.BasicFormSample
 
         private void btnDecrease_Click(object sender, EventArgs e)
         {
-            tmr.Interval += 100;
+            tmr.Interval += 50;
             btnIncrease.Enabled = true;
         }
+    }
+
+    enum Direction
+    {
+        Left,
+        Right
     }
 }

@@ -58,7 +58,7 @@
             // 
             // btnPlayer
             // 
-            btnPlayer.Location = new Point(12, 26);
+            btnPlayer.Location = new Point(0, 26);
             btnPlayer.Name = "btnPlayer";
             btnPlayer.Size = new Size(75, 23);
             btnPlayer.TabIndex = 1;
@@ -67,7 +67,7 @@
             // tmr
             // 
             tmr.Enabled = true;
-            tmr.Interval = 2000;
+            tmr.Interval = 1000;
             tmr.Tick += tmr_Tick;
             // 
             // textBox1

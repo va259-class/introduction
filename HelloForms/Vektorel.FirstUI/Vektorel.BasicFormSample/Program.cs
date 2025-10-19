@@ -6,7 +6,7 @@ namespace Vektorel.BasicFormSample
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormSlider());
+            Application.Run(new FrmTeamManagement());
         }
     }
 }

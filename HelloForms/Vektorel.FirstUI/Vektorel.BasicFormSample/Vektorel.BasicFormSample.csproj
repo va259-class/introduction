@@ -7,4 +7,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Vektorel.CommonLibraries\Vektorel.CommonLibraries.csproj" />
+  </ItemGroup>
+
 </Project>

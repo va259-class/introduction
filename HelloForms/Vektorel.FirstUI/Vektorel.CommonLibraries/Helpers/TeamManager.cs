@@ -1,6 +1,8 @@
-﻿namespace Vektorel.BasicFormSample.Helpers
+﻿using System.Drawing;
+
+namespace Vektorel.CommonLibraries.Helpers
 {
-    class TeamManager
+    public class TeamManager
     {
         //takımları saklayacağımız alan
         //bu liste bir class
@@ -43,7 +45,7 @@
         }
     }
 
-    class Team
+    public class Team
     {
         //public string name; -> Property yaptık çünkü listbox kullanmak istedik. Binding sebepli buna mecburuz
         public string Name { get; set; }

@@ -28,13 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lstTeams = new ListBox();
+            pnlColor1 = new Panel();
+            pnlColor2 = new Panel();
             SuspendLayout();
+            // 
+            // lstTeams
+            // 
+            lstTeams.FormattingEnabled = true;
+            lstTeams.ItemHeight = 15;
+            lstTeams.Location = new Point(12, 12);
+            lstTeams.Name = "lstTeams";
+            lstTeams.Size = new Size(137, 289);
+            lstTeams.TabIndex = 0;
+            lstTeams.SelectedIndexChanged += lstTeams_SelectedIndexChanged;
+            // 
+            // pnlColor1
+            // 
+            pnlColor1.Location = new Point(155, 12);
+            pnlColor1.Name = "pnlColor1";
+            pnlColor1.Size = new Size(76, 81);
+            pnlColor1.TabIndex = 1;
+            // 
+            // pnlColor2
+            // 
+            pnlColor2.Location = new Point(237, 12);
+            pnlColor2.Name = "pnlColor2";
+            pnlColor2.Size = new Size(76, 81);
+            pnlColor2.TabIndex = 2;
             // 
             // FrmTeamManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(389, 339);
+            ClientSize = new Size(320, 311);
+            Controls.Add(pnlColor2);
+            Controls.Add(pnlColor1);
+            Controls.Add(lstTeams);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -45,5 +75,9 @@
         }
 
         #endregion
+
+        private ListBox lstTeams;
+        private Panel pnlColor1;
+        private Panel pnlColor2;
     }
 }

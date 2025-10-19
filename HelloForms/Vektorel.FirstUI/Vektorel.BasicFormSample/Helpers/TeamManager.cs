@@ -18,16 +18,33 @@
         public void CreateTeam(string name)
         {
             var team = new Team();
-            team.name = name;
+            team.Name = name;
 
             teams.Add(team);
         }
+
+        public List<Team> GetTeams()
+        {
+            return teams;
+        }
+
+
     }
 
     class Team
     {
-        public string name;
-        public Color color1;
-        public Color color2;
+        //public string name; -> Property yaptık çünkü listbox kullanmak istedik. Binding sebepli buna mecburuz
+        public string Name { get; set; }
+        public Color Color1 { get; set; }
+        public Color Color2 { get; set; }
     }
 }
+
+/*
+ * NAMING CONVENSIONS:
+ * 
+ Camel Case: vektorelBilisimAkademi -> değişken isimleri
+ Pascal Case: VektorelBilisimAkademi -> Class, Interface gibi tipler, Method isimleri
+ kebab Case: vektorel-bilisim-akademi -> CSS
+ snakecase: _vektorel_bilisim_akademi -> bazen fieldlar, ya da değişkenler
+ */

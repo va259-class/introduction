@@ -17,8 +17,16 @@
 
         public void CreateTeam(string name)
         {
+            CreateTeam(name, Color.Transparent, Color.Transparent);
+        }
+
+        // method overloading
+        public void CreateTeam(string name, Color color1, Color color2)
+        {
             var team = new Team();
             team.Name = name;
+            team.Color1 = color1;
+            team.Color2 = color2;
 
             teams.Add(team);
         }
@@ -28,7 +36,11 @@
             return teams;
         }
 
-
+        public void SetTeamColor(Team team, Color color1, Color color2) 
+        {
+            team.Color1 = color1;    
+            team.Color2 = color2;    
+        }
     }
 
     class Team

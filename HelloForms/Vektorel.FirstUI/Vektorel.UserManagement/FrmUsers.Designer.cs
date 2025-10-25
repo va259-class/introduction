@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnClear = new Button();
             label4 = new Label();
             cmbCity = new ComboBox();
             label3 = new Label();
@@ -45,6 +46,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnClear);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(cmbCity);
             groupBox1.Controls.Add(label3);
@@ -60,6 +62,16 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Kullanıcı Bilgileri";
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(411, 73);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(86, 31);
+            btnClear.TabIndex = 9;
+            btnClear.Text = "Temizle";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // label4
             // 
@@ -138,7 +150,7 @@
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(86, 31);
             btnSave.TabIndex = 0;
-            btnSave.Text = "Kaydet";
+            btnSave.Text = "Ekle";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
@@ -151,6 +163,7 @@
             dgvUsers.Location = new Point(14, 129);
             dgvUsers.MultiSelect = false;
             dgvUsers.Name = "dgvUsers";
+            dgvUsers.ReadOnly = true;
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.Size = new Size(606, 265);
             dgvUsers.TabIndex = 1;
@@ -189,5 +202,6 @@
         private Label label1;
         private Button btnSave;
         private DataGridView dgvUsers;
+        private Button btnClear;
     }
 }

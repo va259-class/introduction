@@ -37,7 +37,7 @@
             label2 = new Label();
             txtFirstName = new TextBox();
             label1 = new Label();
-            button1 = new Button();
+            btnSave = new Button();
             dgvUsers = new DataGridView();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
@@ -53,7 +53,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtFirstName);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnSave);
             groupBox1.Location = new Point(14, 13);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(606, 110);
@@ -132,14 +132,15 @@
             label1.TabIndex = 1;
             label1.Text = "Adı";
             // 
-            // button1
+            // btnSave
             // 
-            button1.Location = new Point(503, 73);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 31);
-            button1.TabIndex = 0;
-            button1.Text = "Kaydet";
-            button1.UseVisualStyleBackColor = true;
+            btnSave.Location = new Point(503, 73);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(86, 31);
+            btnSave.TabIndex = 0;
+            btnSave.Text = "Kaydet";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // dgvUsers
             // 
@@ -180,7 +181,7 @@
         private Label label2;
         private TextBox txtFirstName;
         private Label label1;
-        private Button button1;
+        private Button btnSave;
         private DataGridView dgvUsers;
     }
 }

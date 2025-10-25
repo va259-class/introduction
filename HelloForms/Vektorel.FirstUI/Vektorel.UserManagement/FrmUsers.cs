@@ -20,6 +20,20 @@ namespace Vektorel.UserManagement
             var dp = new FakeDataProvider();
             cmbCity.DataSource = dp.GetCities();
             cmbCity.DisplayMember = nameof(City.Name);
+
+            dgvUsers.DataSource = dp.GetUsers();
+        }
+        private int id = 3;
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var user = new User()
+            {
+                Id = ++id,
+                FirstName = txtFirstName.Text,
+                LastName = txtLastName.Text,
+                BirthDate = DateOnly.FromDateTime(dtpBirthDate.Value),
+                City = cmbCity.SelectedItem as City
+            };
         }
     }
 }

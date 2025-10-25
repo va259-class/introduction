@@ -11,6 +11,7 @@ namespace Vektorel.UserManagement.Helpers
     internal class FakeDataProvider
     {
         List<City> cities;
+        List<User> users;
         //Constructor nedir hatırla
         public FakeDataProvider()
         {
@@ -24,12 +25,42 @@ namespace Vektorel.UserManagement.Helpers
                 new City() { Id = 6, Name = "Trabzon" },
                 new City() { Id = 7, Name = "Gaziantep" }
             };
+            users = new List<User>();
+            users.Add(new User()
+            {
+                Id = 1,
+                FirstName = "Can",
+                LastName = "Perk",
+                BirthDate = new DateOnly(1990, 2, 7),
+                City = cities[0]
+            });
+            users.Add(new User()
+            {
+                Id = 2,
+                FirstName = "Onur",
+                LastName = "Özsoy",
+                BirthDate = new DateOnly(1993, 10, 20),
+                City = cities[4]
+            });
+            users.Add(new User()
+            {
+                Id = 3,
+                FirstName = "Taha Can",
+                LastName = "Aşkar",
+                BirthDate = new DateOnly(1993, 10, 20),
+                City = cities[4]
+            });
         }
 
         // List ile ReadOnlyCollection farkını hatırla
         public ReadOnlyCollection<City> GetCities()
         {
             return cities.AsReadOnly();
+        }
+
+        public List<User> GetUsers()
+        {
+            return users;
         }
     }
 }

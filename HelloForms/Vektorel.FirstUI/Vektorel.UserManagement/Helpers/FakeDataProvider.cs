@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using Vektorel.UserManagement.Models;
 
 namespace Vektorel.UserManagement.Helpers
@@ -11,7 +7,7 @@ namespace Vektorel.UserManagement.Helpers
     internal class FakeDataProvider
     {
         List<City> cities;
-        List<User> users;
+        BindingList<User> users;
         //Constructor nedir hatırla
         public FakeDataProvider()
         {
@@ -25,7 +21,7 @@ namespace Vektorel.UserManagement.Helpers
                 new City() { Id = 6, Name = "Trabzon" },
                 new City() { Id = 7, Name = "Gaziantep" }
             };
-            users = new List<User>();
+            users = new BindingList<User>();
             users.Add(new User()
             {
                 Id = 1,
@@ -57,10 +53,15 @@ namespace Vektorel.UserManagement.Helpers
         {
             return cities.AsReadOnly();
         }
-
-        public List<User> GetUsers()
+        //Data bind konusunda avantaj sağladığı için kullandık
+        public BindingList<User> GetUsers()
         {
             return users;
+        }
+
+        public void AddUser(User user)
+        {
+            users.Add(user);
         }
     }
 }

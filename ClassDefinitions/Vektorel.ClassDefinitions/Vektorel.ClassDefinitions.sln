@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.StaticNonStatic", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.OtherDefinitions", "Vektorel.OtherDefinitions\Vektorel.OtherDefinitions.csproj", "{525F15BC-C619-485A-95A8-62D30B445C21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.StaticNonStatic.Sample", "Vektorel.StaticNonStatic.Sample\Vektorel.StaticNonStatic.Sample.csproj", "{EBE98705-6B5E-4EE1-BDCB-1FB445A2A8E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.StaticMethodSample", "Vektorel.StaticMethodSample\Vektorel.StaticMethodSample.csproj", "{E391120F-F574-490A-9892-AAA1D7667C1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{525F15BC-C619-485A-95A8-62D30B445C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{525F15BC-C619-485A-95A8-62D30B445C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{525F15BC-C619-485A-95A8-62D30B445C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE98705-6B5E-4EE1-BDCB-1FB445A2A8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE98705-6B5E-4EE1-BDCB-1FB445A2A8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE98705-6B5E-4EE1-BDCB-1FB445A2A8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE98705-6B5E-4EE1-BDCB-1FB445A2A8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E391120F-F574-490A-9892-AAA1D7667C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E391120F-F574-490A-9892-AAA1D7667C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E391120F-F574-490A-9892-AAA1D7667C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E391120F-F574-490A-9892-AAA1D7667C1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

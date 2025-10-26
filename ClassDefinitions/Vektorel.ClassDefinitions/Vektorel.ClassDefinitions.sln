@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.StaticNonStatic", "Vektorel.StaticNonStatic\Vektorel.StaticNonStatic.csproj", "{B1B3E342-D85A-4396-891C-D009244EA7D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.OtherDefinitions", "Vektorel.OtherDefinitions\Vektorel.OtherDefinitions.csproj", "{525F15BC-C619-485A-95A8-62D30B445C21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1B3E342-D85A-4396-891C-D009244EA7D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B3E342-D85A-4396-891C-D009244EA7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B3E342-D85A-4396-891C-D009244EA7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B3E342-D85A-4396-891C-D009244EA7D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525F15BC-C619-485A-95A8-62D30B445C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525F15BC-C619-485A-95A8-62D30B445C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525F15BC-C619-485A-95A8-62D30B445C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525F15BC-C619-485A-95A8-62D30B445C21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A360855A-4012-44E7-A5E0-026059F4AA0C}
+	EndGlobalSection
+EndGlobal

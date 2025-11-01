@@ -1,8 +1,7 @@
 ﻿namespace Vektorel.Inheritance.Types.Coorporation
 {
-    internal class Intern : Employee
+    internal class ContractedEmployee : Employee
     {
-        public DateOnly StartDate { get; set; }
         public DateOnly EndDate { get; set; }
     }
 }

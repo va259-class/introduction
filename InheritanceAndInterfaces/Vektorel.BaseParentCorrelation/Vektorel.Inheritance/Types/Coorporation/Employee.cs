@@ -6,7 +6,6 @@ namespace Vektorel.Inheritance.Types.Coorporation
     {
         public DateOnly HireDate { get; set; }
         public decimal Salary { get; set; }
-        public byte VacationDays { get; set; }
         public int SSN { get; set; }
     }
 }

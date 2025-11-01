@@ -4,4 +4,9 @@
     {
         public string Phone { get; set; }
     }
+
+    internal class ServicePerson : EducationBase
+    {
+
+    }
 }

@@ -2,8 +2,13 @@
 
 namespace Vektorel.Interfaces.Concretes
 {
-    internal class Turkish : Person, ISpeakable
+    internal class Turkish : Person, ISpeakable, IRunnable
     {
+        public void Run(int x, int y)
+        {
+            Console.WriteLine($"İstikamet alıp {x} - {y} koordinatına koştum");
+        }
+
         public string SayHi()
         {
             return "Merhaba";

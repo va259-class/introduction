@@ -24,10 +24,16 @@ namespace Vektorel.Interfaces
 
             t.Breath();
             Console.WriteLine(t.SayHi());
+            t.Speak("gunaydin herkese");
+            t.Run(6, 9);
+
             e.Breath();
             Console.WriteLine(e.SayHi());
+            e.Speak("gunaydin herkese");
+            
             r.Breath();
             Console.WriteLine(r.SayHi());
+            r.Speak("gunaydin herkese");
         }
     }
 }

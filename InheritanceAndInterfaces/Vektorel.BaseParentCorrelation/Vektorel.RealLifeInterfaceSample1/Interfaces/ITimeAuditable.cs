@@ -1,6 +1,7 @@
 ﻿namespace Vektorel.RealLifeInterfaceSample1.Interfaces
 {
-    interface ITrackable : ITimeAuditable, IUserAuditable
+    interface ITimeAuditable : ICreatedAt, IModifiedAt
     {
+
     }
 }

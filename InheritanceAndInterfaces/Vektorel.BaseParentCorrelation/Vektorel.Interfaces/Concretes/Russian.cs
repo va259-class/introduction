@@ -2,8 +2,13 @@
 
 namespace Vektorel.Interfaces.Concretes
 {
-    internal class Russian : Person, ISpeakable
+    internal sealed class Russian : Person, ISpeakable
     {
+        public override void Love()
+        {
+            Console.WriteLine("Я тебя люблю");
+        }
+
         public string SayHi()
         {
             return "Привет!";

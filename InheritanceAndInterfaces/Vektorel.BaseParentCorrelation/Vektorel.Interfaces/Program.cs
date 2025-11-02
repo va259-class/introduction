@@ -15,7 +15,9 @@ namespace Vektorel.Interfaces
             };
             var e = new English
             {
-                FullName = "John Smith"
+                FullName = "John Smith",
+                Weight = 80,
+                Height = 192
             };
             var r = new Russian
             {
@@ -26,14 +28,17 @@ namespace Vektorel.Interfaces
             Console.WriteLine(t.SayHi());
             t.Speak("gunaydin herkese");
             t.Run(6, 9);
+            t.Love();
 
             e.Breath();
             Console.WriteLine(e.SayHi());
             e.Speak("gunaydin herkese");
+            e.Love();
             
             r.Breath();
             Console.WriteLine(r.SayHi());
             r.Speak("gunaydin herkese");
+            r.Love();
         }
     }
 }

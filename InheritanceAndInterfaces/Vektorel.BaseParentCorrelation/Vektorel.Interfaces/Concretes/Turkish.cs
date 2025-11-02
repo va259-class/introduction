@@ -2,8 +2,13 @@
 
 namespace Vektorel.Interfaces.Concretes
 {
-    internal class Turkish : Person, ISpeakable, IRunnable
+    internal sealed class Turkish : Person, ISpeakable, IRunnable
     {
+        public override void Love()
+        {
+            Console.WriteLine("Seni seviyorum");
+        }
+
         public void Run(int x, int y)
         {
             Console.WriteLine($"İstikamet alıp {x} - {y} koordinatına koştum");

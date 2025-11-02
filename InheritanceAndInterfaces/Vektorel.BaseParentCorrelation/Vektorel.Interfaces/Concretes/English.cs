@@ -2,8 +2,13 @@
 
 namespace Vektorel.Interfaces.Concretes
 {
-    internal class English : Person, ISpeakable
+    internal sealed class English : Person, ISpeakable
     {
+        public override void Love()
+        {
+            Console.WriteLine("I love you");
+        }
+
         public string SayHi()
         {
             return "Hi";
@@ -14,4 +19,10 @@ namespace Vektorel.Interfaces.Concretes
             Console.WriteLine($"I said {thingsToSpeak} in English");
         }
     }
+
+    //sealed class inherit edilemez
+    //internal class Scottish : English
+    //{
+
+    //}
 }

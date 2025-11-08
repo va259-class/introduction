@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.Enumerables", "Vek
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.WeatherForecast", "Vektorel.WeatherForecast\Vektorel.WeatherForecast.csproj", "{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.Common", "Vektorel.Common\Vektorel.Common.csproj", "{BCA85006-3989-40C2-A5D9-652F3948A04C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.Tests", "Vektorel.Tests\Vektorel.Tests.csproj", "{9F7A9345-5444-4A09-9A89-0CC292D2E613}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA85006-3989-40C2-A5D9-652F3948A04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA85006-3989-40C2-A5D9-652F3948A04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA85006-3989-40C2-A5D9-652F3948A04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA85006-3989-40C2-A5D9-652F3948A04C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7A9345-5444-4A09-9A89-0CC292D2E613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7A9345-5444-4A09-9A89-0CC292D2E613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7A9345-5444-4A09-9A89-0CC292D2E613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7A9345-5444-4A09-9A89-0CC292D2E613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

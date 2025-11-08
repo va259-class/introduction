@@ -168,9 +168,11 @@
             Controls.Add(label2);
             Controls.Add(nudHeat);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmForecastData";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Hava Durumu Bilgisi";
             Load += FrmForecastData_Load;
             ((System.ComponentModel.ISupportInitialize)nudHeat).EndInit();

@@ -37,7 +37,6 @@
             {
                 t1
             };
-
             p1.FullName = "Furkan Kaymak";
 
             foreach (var df in plates)

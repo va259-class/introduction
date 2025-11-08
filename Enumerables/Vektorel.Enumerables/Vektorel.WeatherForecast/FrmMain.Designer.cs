@@ -44,6 +44,7 @@
             btnNew.TabIndex = 0;
             btnNew.Text = "Şehir Ekle";
             btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
             // 
             // cmbCities
             // 
@@ -86,6 +87,7 @@
             btnAddForecast.TabIndex = 4;
             btnAddForecast.Text = "Tahmin Ekle";
             btnAddForecast.UseVisualStyleBackColor = true;
+            btnAddForecast.Click += btnAddForecast_Click;
             // 
             // FrmMain
             // 
@@ -97,6 +99,7 @@
             Controls.Add(label1);
             Controls.Add(cmbCities);
             Controls.Add(btnNew);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmMain";

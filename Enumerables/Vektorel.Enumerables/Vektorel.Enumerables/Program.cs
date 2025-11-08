@@ -60,6 +60,7 @@
                 new Lecture("Matematik", 3, 22),
                 new Lecture("Tarih", 2, 14),
                 new Lecture("Kimya", 3, 20),
+                new Lecture("Kimya", 7, 38),
                 new Lecture("Türkçe", 4, 28),
             };
 
@@ -67,7 +68,6 @@
             {
                 Console.WriteLine("{0, -10} - {1,2} saatte {2,2} kredi", lc.Name, lc.CourseCount, lc.Credit);
             }
-              
         }
     }
 
@@ -78,17 +78,4 @@
     }
     // record da bir struct'tır
     record Team(string Name, int Year);
-
-    class Lecture
-    {
-        public Lecture(string name, byte credit, byte courseCount)
-        {
-            Name = name;
-            Credit = credit;
-            CourseCount = courseCount;
-        }
-        public string Name { get; set; }
-        public byte Credit { get; set; }
-        public byte CourseCount { get; set; }
-    }
 }

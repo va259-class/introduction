@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.Enumerables", "Vektorel.Enumerables\Vektorel.Enumerables.csproj", "{3B320DB5-E29F-4E20-9552-D9F23A6C28E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.WeatherForecast", "Vektorel.WeatherForecast\Vektorel.WeatherForecast.csproj", "{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3B320DB5-E29F-4E20-9552-D9F23A6C28E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B320DB5-E29F-4E20-9552-D9F23A6C28E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B320DB5-E29F-4E20-9552-D9F23A6C28E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAE347A-B4BC-459D-A4D6-B2CC757BBE16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

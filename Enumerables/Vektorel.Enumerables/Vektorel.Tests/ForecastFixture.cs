@@ -1,4 +1,5 @@
 using Vektorel.Common;
+using Vektorel.Common.Models;
 
 namespace Vektorel.Tests
 {
@@ -22,8 +23,6 @@ namespace Vektorel.Tests
 
             var forecast = Sut.GetCityForecasts("Ankara");
             Assert.That(forecast.Count, Is.EqualTo(0));
-
-
         }
 
         private void Sut_OnCityAdded(string city)
@@ -59,6 +58,34 @@ namespace Vektorel.Tests
                 Sut.AddCity(cityNames[index]);
             }
             Assert.That(Sut.CityCount, Is.EqualTo(6));
+        }
+
+        [Test]
+        public void CanAdd_Forecast()
+        {
+            Sut.AddCity("Kars");
+            Sut.AddForecast("Kars", new Forecast(23, 500, 45, 23, "Güneþli"));
+
+            Assert.That(Sut.GetCityForecasts("Kars").Count, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void CanAdd_Forecasts()
+        {
+            Sut.AddCity("Kars");
+            Sut.AddForecast("Kars", new Forecast(23, 500, 45, 23, "Güneþli"));
+            Sut.AddForecast("Kars", new Forecast(24, 400, 40, 20, "Parçalý Bulutlu"));
+            Sut.AddForecast("Kars", new Forecast(26, 450, 38, 28, "Saðanak Yaðýþlý"));
+            Sut.AddForecast("Kars", new Forecast(22, 600, 41, 11, "Güneþli"));
+            Sut.AddForecast("Kars", new Forecast(24, 500, 46, 19, "Bulutlu"));
+
+            Assert.That(Sut.GetCityForecasts("Kars").Count, Is.EqualTo(5));
+        }
+
+        [Test]
+        public void CannotAdd_Forecast()
+        {
+
         }
     }
 }

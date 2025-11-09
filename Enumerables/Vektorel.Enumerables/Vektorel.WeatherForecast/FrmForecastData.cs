@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Vektorel.Common;
+using Vektorel.Common.Models;
 
 namespace Vektorel.WeatherForecast
 {
     public partial class FrmForecastData : Form
     {
-        public FrmForecastData()
+        private readonly ForecastManager forecastManager;
+        private readonly string city;
+
+        public FrmForecastData(string city, ForecastManager forecastManager)
         {
             InitializeComponent();
+            this.city = city;
+            this.forecastManager = forecastManager;
         }
 
         private void FrmForecastData_Load(object sender, EventArgs e)
@@ -26,6 +24,18 @@ namespace Vektorel.WeatherForecast
             cmbStatus.Items.Add("Kar Yağışlı");
             cmbStatus.Items.Add("Hafif Yağmurlu");
             cmbStatus.Items.Add("Parçalı Bulutlu");
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var forecast = new Forecast(nudHeat.Value, 
+                                        nudUV.Value, 
+                                        nudHumidity.Value, 
+                                        nudWindSpeed.Value, 
+                                        cmbStatus.SelectedItem.ToString());
+
+            forecastManager.AddForecast(city, forecast);
+            Close();
         }
     }
 }

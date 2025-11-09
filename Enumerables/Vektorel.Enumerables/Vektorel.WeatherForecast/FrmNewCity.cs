@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Vektorel.Common;
+﻿using Vektorel.Common;
 
 namespace Vektorel.WeatherForecast
 {
@@ -17,7 +8,7 @@ namespace Vektorel.WeatherForecast
 
         public FrmNewCity(ForecastManager forecastManager)
         {
-            InitializeComponent();
+            InitializeComponents();
             this.forecastManager = forecastManager;
         }
 

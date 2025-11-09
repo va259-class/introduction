@@ -21,12 +21,22 @@ namespace Vektorel.WeatherForecast
         private void btnNew_Click(object sender, EventArgs e)
         {
             var f = new FrmNewCity(forecastManager);
+            //f.FormClosed += F_FormClosed;
             f.ShowDialog();
         }
 
+        //private void F_FormClosed(object? sender, FormClosedEventArgs e)
+        //{
+        //    cmbCities.Items.Clear();
+        //    foreach (var city in forecastManager.GetCities())
+        //    {
+        //        cmbCities.Items.Add(city);
+        //    }
+        //}
+
         private void btnAddForecast_Click(object sender, EventArgs e)
         {
-            var f = new FrmForecastData();
+            var f = new FrmForecastData(cmbCities.SelectedItem.ToString(), forecastManager);
             f.ShowDialog();
         }
     }

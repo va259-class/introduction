@@ -3,6 +3,7 @@
 namespace Vektorel.Common
 {
     public delegate void CityAdded(string city);
+    public delegate void ForecastPublished(string city);
 
     public class ForecastManager
     {
@@ -14,18 +15,22 @@ namespace Vektorel.Common
         }
 
         public event CityAdded OnCityAdded;
+        public event ForecastPublished OnForecastPublished;
 
-        public void AddCity(string name)
+        public void AddCity(string city)
         {
-            if (cityForecast.ContainsKey(name))
+            if (cityForecast.ContainsKey(city))
             {
                 return;
             }
-            cityForecast.Add(name, new List<Forecast>());
-            if (OnCityAdded != null)
+            cityForecast.Add(city, new List<Forecast>());
+            if (OnCityAdded != null)//bu instance'ta event'e bağlanıldı ise
             {
-                OnCityAdded.Invoke(name);
+                OnCityAdded.Invoke(city);
             }
+
+            //Kısa yazım
+            //OnCityAdded?.Invoke(city);
         }
 
         public int CityCount { get { return cityForecast.Count; } }
@@ -37,6 +42,18 @@ namespace Vektorel.Common
                 return cityForecast[name];
             }
             return null;
+        }
+
+        public void AddForecast(string city, Forecast forecast)
+        {
+            if (!cityForecast.ContainsKey(city)) // ekleme yapılacak şehir yoksa çık
+            {
+                return;
+            }
+
+            var forecasts = cityForecast[city];
+            forecasts.Add(forecast);
+            OnForecastPublished?.Invoke(city);
         }
     }
 }

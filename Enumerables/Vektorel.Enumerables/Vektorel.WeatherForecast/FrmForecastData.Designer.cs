@@ -69,8 +69,6 @@
             // 
             nudHumidity.DecimalPlaces = 2;
             nudHumidity.Location = new Point(12, 71);
-            nudHumidity.Maximum = new decimal(new int[] { 85, 0, 0, 0 });
-            nudHumidity.Minimum = new decimal(new int[] { 50, 0, 0, int.MinValue });
             nudHumidity.Name = "nudHumidity";
             nudHumidity.Size = new Size(166, 23);
             nudHumidity.TabIndex = 3;
@@ -89,12 +87,13 @@
             // 
             nudWindSpeed.DecimalPlaces = 2;
             nudWindSpeed.Location = new Point(12, 115);
-            nudWindSpeed.Maximum = new decimal(new int[] { 85, 0, 0, 0 });
-            nudWindSpeed.Minimum = new decimal(new int[] { 50, 0, 0, int.MinValue });
+            nudWindSpeed.Maximum = new decimal(new int[] { 160, 0, 0, 0 });
+            nudWindSpeed.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudWindSpeed.Name = "nudWindSpeed";
             nudWindSpeed.Size = new Size(166, 23);
             nudWindSpeed.TabIndex = 5;
             nudWindSpeed.TextAlign = HorizontalAlignment.Right;
+            nudWindSpeed.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label3
             // 
@@ -109,12 +108,13 @@
             // 
             nudUV.DecimalPlaces = 2;
             nudUV.Location = new Point(12, 159);
-            nudUV.Maximum = new decimal(new int[] { 85, 0, 0, 0 });
-            nudUV.Minimum = new decimal(new int[] { 50, 0, 0, int.MinValue });
+            nudUV.Maximum = new decimal(new int[] { 850, 0, 0, 0 });
+            nudUV.Minimum = new decimal(new int[] { 60, 0, 0, 0 });
             nudUV.Name = "nudUV";
             nudUV.Size = new Size(166, 23);
             nudUV.TabIndex = 7;
             nudUV.TextAlign = HorizontalAlignment.Right;
+            nudUV.Value = new decimal(new int[] { 60, 0, 0, 0 });
             // 
             // label4
             // 
@@ -151,6 +151,7 @@
             btnSave.TabIndex = 10;
             btnSave.Text = "Kaydet";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // FrmForecastData
             // 

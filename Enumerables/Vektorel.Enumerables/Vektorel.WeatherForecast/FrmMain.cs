@@ -10,6 +10,18 @@ namespace Vektorel.WeatherForecast
             InitializeComponent();
             forecastManager = new ForecastManager();
             forecastManager.OnCityAdded += ForecastManager_OnCityAdded;
+            forecastManager.OnForecastPublished += ForecastManager_OnForecastPublished;
+        }
+
+        private void ForecastManager_OnForecastPublished(string city)
+        {
+            if (cmbCities.SelectedItem.ToString() != city)
+            {
+                return;
+            }
+
+            dgvForecast.DataSource = null;
+            dgvForecast.DataSource = forecastManager.GetCityForecasts(city);
         }
 
         private void ForecastManager_OnCityAdded(string city)
@@ -38,6 +50,12 @@ namespace Vektorel.WeatherForecast
         {
             var f = new FrmForecastData(cmbCities.SelectedItem.ToString(), forecastManager);
             f.ShowDialog();
+        }
+
+        private void cmbCities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvForecast.DataSource = null;
+            dgvForecast.DataSource = forecastManager.GetCityForecasts(cmbCities.SelectedItem.ToString());
         }
     }
 }

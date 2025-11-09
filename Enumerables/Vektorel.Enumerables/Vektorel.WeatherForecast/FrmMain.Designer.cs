@@ -54,6 +54,7 @@
             cmbCities.Name = "cmbCities";
             cmbCities.Size = new Size(134, 23);
             cmbCities.TabIndex = 1;
+            cmbCities.SelectedIndexChanged += cmbCities_SelectedIndexChanged;
             // 
             // label1
             // 

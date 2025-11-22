@@ -40,8 +40,8 @@
             button10 = new Button();
             button11 = new Button();
             button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
+            btnTimeZone = new Button();
+            btnKind = new Button();
             btnDayOfYear = new Button();
             btnDayCount = new Button();
             btnDateDiff = new Button();
@@ -170,23 +170,25 @@
             button12.Text = "button12";
             button12.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btnTimeZone
             // 
-            button13.Location = new Point(387, 331);
-            button13.Name = "button13";
-            button13.Size = new Size(150, 23);
-            button13.TabIndex = 23;
-            button13.Text = "button13";
-            button13.UseVisualStyleBackColor = true;
+            btnTimeZone.Location = new Point(387, 331);
+            btnTimeZone.Name = "btnTimeZone";
+            btnTimeZone.Size = new Size(150, 23);
+            btnTimeZone.TabIndex = 23;
+            btnTimeZone.Text = "Zaman Dilimi Ekle";
+            btnTimeZone.UseVisualStyleBackColor = true;
+            btnTimeZone.Click += btnTimeZone_Click;
             // 
-            // button14
+            // btnKind
             // 
-            button14.Location = new Point(387, 302);
-            button14.Name = "button14";
-            button14.Size = new Size(150, 23);
-            button14.TabIndex = 22;
-            button14.Text = "button14";
-            button14.UseVisualStyleBackColor = true;
+            btnKind.Location = new Point(387, 302);
+            btnKind.Name = "btnKind";
+            btnKind.Size = new Size(150, 23);
+            btnKind.TabIndex = 22;
+            btnKind.Text = "DateTime Kind";
+            btnKind.UseVisualStyleBackColor = true;
+            btnKind.Click += btnKind_Click;
             // 
             // btnDayOfYear
             // 
@@ -348,8 +350,8 @@
             Controls.Add(txtStringResult);
             Controls.Add(dtpRef);
             Controls.Add(txtRef);
-            Controls.Add(button13);
-            Controls.Add(button14);
+            Controls.Add(btnTimeZone);
+            Controls.Add(btnKind);
             Controls.Add(btnDayOfYear);
             Controls.Add(btnDayCount);
             Controls.Add(btnDateDiff);
@@ -392,8 +394,8 @@
         private Button button10;
         private Button button11;
         private Button button12;
-        private Button button13;
-        private Button button14;
+        private Button btnTimeZone;
+        private Button btnKind;
         private Button btnDayOfYear;
         private Button btnDayCount;
         private Button btnDateDiff;

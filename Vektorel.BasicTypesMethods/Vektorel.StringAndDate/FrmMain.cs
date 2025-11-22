@@ -57,7 +57,6 @@ namespace Vektorel.StringAndDate
             var day = new DateTime(2025, 7, 13, 14, 0, 0);
 
             var diff = dtpRef.Value - day;
-
             txtDateResult.Text = diff.ToString();
         }
 
@@ -70,6 +69,23 @@ namespace Vektorel.StringAndDate
         private void btnDayOfYear_Click(object sender, EventArgs e)
         {
             txtDateResult.Text = dtpRef.Value.DayOfYear.ToString();
+        }
+
+        private void btnKind_Click(object sender, EventArgs e)
+        {
+            var dt = new DateTime(2024, 12, 31, 22, 0, 0, DateTimeKind.Utc);
+
+            txtDateResult.Text = dt.ToLocalTime().ToString();
+        }
+
+        private void btnTimeZone_Click(object sender, EventArgs e)
+        {
+            var dt = new DateTime(2024, 12, 31, 22, 0, 0, DateTimeKind.Utc);
+
+            var chinaInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");
+            var date = TimeZoneInfo.ConvertTimeFromUtc(dt, chinaInfo);
+            
+            txtDateResult.Text = date.ToString();
         }
     }
 }

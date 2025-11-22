@@ -30,16 +30,16 @@
         {
             btnUpper = new Button();
             btnLower = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
+            btnNoA = new Button();
+            btnSpellCount = new Button();
+            btnWordCount = new Button();
+            btnCrop3Words = new Button();
+            btnIndex = new Button();
+            btnSplit = new Button();
+            btnJoin = new Button();
+            btnTrim = new Button();
+            btnStartCheck = new Button();
+            btnPadLeft = new Button();
             btnTimeZone = new Button();
             btnKind = new Button();
             btnDayOfYear = new Button();
@@ -80,95 +80,105 @@
             btnLower.UseVisualStyleBackColor = true;
             btnLower.Click += btnLower_Click;
             // 
-            // button3
+            // btnNoA
             // 
-            button3.Location = new Point(12, 70);
-            button3.Name = "button3";
-            button3.Size = new Size(150, 23);
-            button3.TabIndex = 2;
-            button3.Text = "A'sız Cümle";
-            button3.UseVisualStyleBackColor = true;
+            btnNoA.Location = new Point(12, 70);
+            btnNoA.Name = "btnNoA";
+            btnNoA.Size = new Size(150, 23);
+            btnNoA.TabIndex = 2;
+            btnNoA.Text = "A'sız Cümle";
+            btnNoA.UseVisualStyleBackColor = true;
+            btnNoA.Click += btnNoA_Click;
             // 
-            // button4
+            // btnSpellCount
             // 
-            button4.Location = new Point(12, 157);
-            button4.Name = "button4";
-            button4.Size = new Size(150, 23);
-            button4.TabIndex = 5;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnSpellCount.Location = new Point(12, 157);
+            btnSpellCount.Name = "btnSpellCount";
+            btnSpellCount.Size = new Size(150, 23);
+            btnSpellCount.TabIndex = 5;
+            btnSpellCount.Text = "Harf Sayısı";
+            btnSpellCount.UseVisualStyleBackColor = true;
+            btnSpellCount.Click += btnSpellCount_Click;
             // 
-            // button5
+            // btnWordCount
             // 
-            button5.Location = new Point(12, 128);
-            button5.Name = "button5";
-            button5.Size = new Size(150, 23);
-            button5.TabIndex = 4;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            btnWordCount.Location = new Point(12, 128);
+            btnWordCount.Name = "btnWordCount";
+            btnWordCount.Size = new Size(150, 23);
+            btnWordCount.TabIndex = 4;
+            btnWordCount.Text = "Kelime Sayısı";
+            btnWordCount.UseVisualStyleBackColor = true;
+            btnWordCount.Click += btnWordCount_Click;
             // 
-            // button6
+            // btnCrop3Words
             // 
-            button6.Location = new Point(12, 99);
-            button6.Name = "button6";
-            button6.Size = new Size(150, 23);
-            button6.TabIndex = 3;
-            button6.Text = "İlk 3 Kelimesiz";
-            button6.UseVisualStyleBackColor = true;
+            btnCrop3Words.Location = new Point(12, 99);
+            btnCrop3Words.Name = "btnCrop3Words";
+            btnCrop3Words.Size = new Size(150, 23);
+            btnCrop3Words.TabIndex = 3;
+            btnCrop3Words.Text = "İlk 3 Kelimesiz";
+            btnCrop3Words.UseVisualStyleBackColor = true;
+            btnCrop3Words.Click += btnCrop3Words_Click;
             // 
-            // button7
+            // btnIndex
             // 
-            button7.Location = new Point(12, 331);
-            button7.Name = "button7";
-            button7.Size = new Size(150, 23);
-            button7.TabIndex = 11;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            btnIndex.Location = new Point(12, 331);
+            btnIndex.Name = "btnIndex";
+            btnIndex.Size = new Size(150, 23);
+            btnIndex.TabIndex = 11;
+            btnIndex.Text = "Sıra Bul";
+            btnIndex.UseVisualStyleBackColor = true;
+            btnIndex.Click += btnIndex_Click;
             // 
-            // button8
+            // btnSplit
             // 
-            button8.Location = new Point(12, 302);
-            button8.Name = "button8";
-            button8.Size = new Size(150, 23);
-            button8.TabIndex = 10;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
+            btnSplit.Location = new Point(12, 302);
+            btnSplit.Name = "btnSplit";
+            btnSplit.Size = new Size(150, 23);
+            btnSplit.TabIndex = 10;
+            btnSplit.Text = "Parçala";
+            btnSplit.UseVisualStyleBackColor = true;
+            btnSplit.Click += btnSplit_Click;
             // 
-            // button9
+            // btnJoin
             // 
-            button9.Location = new Point(12, 273);
-            button9.Name = "button9";
-            button9.Size = new Size(150, 23);
-            button9.TabIndex = 9;
-            button9.Text = "button9";
-            button9.UseVisualStyleBackColor = true;
+            btnJoin.Location = new Point(12, 273);
+            btnJoin.Name = "btnJoin";
+            btnJoin.Size = new Size(150, 23);
+            btnJoin.TabIndex = 9;
+            btnJoin.Text = "Metin Birleştir";
+            btnJoin.UseVisualStyleBackColor = true;
+            btnJoin.Click += btnJoin_Click;
             // 
-            // button10
+            // btnTrim
             // 
-            button10.Location = new Point(12, 244);
-            button10.Name = "button10";
-            button10.Size = new Size(150, 23);
-            button10.TabIndex = 8;
-            button10.Text = "button10";
-            button10.UseVisualStyleBackColor = true;
+            btnTrim.Location = new Point(12, 244);
+            btnTrim.Name = "btnTrim";
+            btnTrim.Size = new Size(150, 23);
+            btnTrim.TabIndex = 8;
+            btnTrim.Text = "Boşluk Temizle";
+            btnTrim.UseVisualStyleBackColor = true;
+            btnTrim.Click += btnTrim_Click;
             // 
-            // button11
+            // btnStartCheck
             // 
-            button11.Location = new Point(12, 215);
-            button11.Name = "button11";
-            button11.Size = new Size(150, 23);
-            button11.TabIndex = 7;
-            button11.Text = "button11";
-            button11.UseVisualStyleBackColor = true;
+            btnStartCheck.Location = new Point(12, 215);
+            btnStartCheck.Name = "btnStartCheck";
+            btnStartCheck.Size = new Size(150, 23);
+            btnStartCheck.TabIndex = 7;
+            btnStartCheck.Text = "Başlangıç Kontrolü";
+            btnStartCheck.UseVisualStyleBackColor = true;
+            btnStartCheck.Click += btnStartCheck_Click;
             // 
-            // button12
+            // btnPadLeft
             // 
-            button12.Location = new Point(12, 186);
-            button12.Name = "button12";
-            button12.Size = new Size(150, 23);
-            button12.TabIndex = 6;
-            button12.Text = "button12";
-            button12.UseVisualStyleBackColor = true;
+            btnPadLeft.Location = new Point(12, 186);
+            btnPadLeft.Name = "btnPadLeft";
+            btnPadLeft.Size = new Size(150, 23);
+            btnPadLeft.TabIndex = 6;
+            btnPadLeft.Text = "Sola Doldur";
+            btnPadLeft.UseVisualStyleBackColor = true;
+            btnPadLeft.Click += btnPadLeft_Click;
             // 
             // btnTimeZone
             // 
@@ -362,16 +372,16 @@
             Controls.Add(btn2MonthsLater);
             Controls.Add(btnYesterday);
             Controls.Add(btnAddDay);
-            Controls.Add(button7);
-            Controls.Add(button8);
-            Controls.Add(button9);
-            Controls.Add(button10);
-            Controls.Add(button11);
-            Controls.Add(button12);
-            Controls.Add(button4);
-            Controls.Add(button5);
-            Controls.Add(button6);
-            Controls.Add(button3);
+            Controls.Add(btnIndex);
+            Controls.Add(btnSplit);
+            Controls.Add(btnJoin);
+            Controls.Add(btnTrim);
+            Controls.Add(btnStartCheck);
+            Controls.Add(btnPadLeft);
+            Controls.Add(btnSpellCount);
+            Controls.Add(btnWordCount);
+            Controls.Add(btnCrop3Words);
+            Controls.Add(btnNoA);
             Controls.Add(btnLower);
             Controls.Add(btnUpper);
             Name = "FrmMain";
@@ -384,16 +394,16 @@
 
         private Button btnUpper;
         private Button btnLower;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
+        private Button btnNoA;
+        private Button btnSpellCount;
+        private Button btnWordCount;
+        private Button btnCrop3Words;
+        private Button btnIndex;
+        private Button btnSplit;
+        private Button btnJoin;
+        private Button btnTrim;
+        private Button btnStartCheck;
+        private Button btnPadLeft;
         private Button btnTimeZone;
         private Button btnKind;
         private Button btnDayOfYear;

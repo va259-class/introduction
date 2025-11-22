@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Vektorel.StringAndDate
 {
     public partial class FrmMain : Form
@@ -84,8 +86,97 @@ namespace Vektorel.StringAndDate
 
             var chinaInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");
             var date = TimeZoneInfo.ConvertTimeFromUtc(dt, chinaInfo);
-            
+
             txtDateResult.Text = date.ToString();
+        }
+
+        private void btnNoA_Click(object sender, EventArgs e)
+        {
+            txtStringResult.Text = txtRef.Text.Replace("a", string.Empty, StringComparison.OrdinalIgnoreCase);
+        }
+
+        private void btnCrop3Words_Click(object sender, EventArgs e)
+        {
+            var croppedText = "I am in love";
+            txtStringResult.Text = txtRef.Text.Substring(croppedText.Length);
+        }
+
+        private void btnWordCount_Click(object sender, EventArgs e)
+        {
+            var parts = txtRef.Text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            txtStringResult.Text = parts.Length.ToString();
+        }
+
+        private void btnSpellCount_Click(object sender, EventArgs e)
+        {
+            var count = 0;
+            foreach (var part in txtRef.Text)
+            {
+                if (char.IsLetter(part))
+                {
+                    count++;
+                }
+            }
+            txtStringResult.Text = count.ToString();
+        }
+
+        private void btnPadLeft_Click(object sender, EventArgs e)
+        {
+            txtStringResult.Text = $"AA{txtRef.Text.PadLeft(10, '0')}";
+        }
+
+        private void btnStartCheck_Click(object sender, EventArgs e)
+        {
+            if (txtRef.Text.StartsWith("CHK"))
+            {
+                txtStringResult.Text = "Kontrol aþamasýndan geçti";
+            }
+            else if (txtRef.Text.StartsWith("APR")) //EndsWith
+            {
+                txtStringResult.Text = "Onay aþamasýndan geçti";
+            }
+            else
+            {
+                txtStringResult.Text = "Süreç baþlamadý";
+            }
+        }
+
+        private void btnTrim_Click(object sender, EventArgs e)
+        {
+            txtStringResult.Text = txtRef.Text.Trim(' ', '.', '_');
+        }
+
+        private void btnJoin_Click(object sender, EventArgs e)
+        {
+            var names = new string[] { "Can", "Faruk", "Taha", "Kenan", "Onur" };
+
+            txtStringResult.Text = string.Join(", ", names);
+
+            txtStringResult.Text = string.Join(", ", names.Take(names.Length - 1)); // kaç tane öðe alýnsýn
+            txtStringResult.Text += $" ve {names[names.Length - 1]}";
+        }
+
+        private void btnSplit_Click(object sender, EventArgs e)
+        {
+            txtRef.Text = "Root/Users/Can/Home/Documents";
+
+            var parts = txtRef.Text.Split('/');
+
+            var order = 1;
+            var builder = new StringBuilder(); // performans kazanýmý için
+            foreach (var part in parts)
+            {
+                builder.AppendLine($"{order++}. {part}");
+            }
+
+            txtStringResult.Text = builder.ToString();
+        }
+
+        private void btnIndex_Click(object sender, EventArgs e)
+        {
+            txtRef.Text = "canperk36@gmail.com";
+            var index = txtRef.Text.IndexOf('@');
+            txtStringResult.Text = txtRef.Text.Substring(0, index);
         }
     }
 }

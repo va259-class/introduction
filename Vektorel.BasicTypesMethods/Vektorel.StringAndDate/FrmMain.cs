@@ -46,5 +46,30 @@ namespace Vektorel.StringAndDate
         {
             txtDateResult.Text = dtpRef.Value.AddHours(1).ToString();
         }
+
+        private void btnCustomFormat_Click(object sender, EventArgs e)
+        {
+            txtDateResult.Text = dtpRef.Value.ToString("dd\\/MM\\/yyyy HH:mm");
+        }
+
+        private void btnDateDiff_Click(object sender, EventArgs e)
+        {
+            var day = new DateTime(2025, 7, 13, 14, 0, 0);
+
+            var diff = dtpRef.Value - day;
+
+            txtDateResult.Text = diff.ToString();
+        }
+
+        private void btnDayCount_Click(object sender, EventArgs e)
+        {
+            var dayCount = DateTime.DaysInMonth(dtpRef.Value.Year, dtpRef.Value.Month);
+            txtDateResult.Text = dayCount.ToString();
+        }
+
+        private void btnDayOfYear_Click(object sender, EventArgs e)
+        {
+            txtDateResult.Text = dtpRef.Value.DayOfYear.ToString();
+        }
     }
 }

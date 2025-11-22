@@ -196,6 +196,7 @@
             btnDayOfYear.TabIndex = 21;
             btnDayOfYear.Text = "Yılın Günü";
             btnDayOfYear.UseVisualStyleBackColor = true;
+            btnDayOfYear.Click += btnDayOfYear_Click;
             // 
             // btnDayCount
             // 
@@ -205,6 +206,7 @@
             btnDayCount.TabIndex = 20;
             btnDayCount.Text = "Aydaki Gün Sayısı";
             btnDayCount.UseVisualStyleBackColor = true;
+            btnDayCount.Click += btnDayCount_Click;
             // 
             // btnDateDiff
             // 
@@ -214,6 +216,7 @@
             btnDateDiff.TabIndex = 19;
             btnDateDiff.Text = "Tarih Farkı";
             btnDateDiff.UseVisualStyleBackColor = true;
+            btnDateDiff.Click += btnDateDiff_Click;
             // 
             // btnCustomFormat
             // 
@@ -223,6 +226,7 @@
             btnCustomFormat.TabIndex = 18;
             btnCustomFormat.Text = "Farklı Formatta Göster";
             btnCustomFormat.UseVisualStyleBackColor = true;
+            btnCustomFormat.Click += btnCustomFormat_Click;
             // 
             // btn1HourLater
             // 

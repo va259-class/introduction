@@ -3,7 +3,7 @@ using Vektorel.Libraries.Abstractions;
 
 namespace Vektorel.Libraries.Models
 {
-    public class ChildBook : Book
+    public class ChildBook : Book, IBorrowable
     {
         public bool HasColors { get; set; }
         public bool? Paintable { get; set; }

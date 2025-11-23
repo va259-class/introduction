@@ -35,6 +35,13 @@ namespace Vektorel.OOPAllInOne
             lh.Add(b3);
 
             lh.GetAllInformations();
+
+            lh.Return(b3);
+            lh.BorrowBook(b1, "5468890");
+            lh.BorrowBook(b3, "3567812");
+            lh.BorrowBook(b1, "4449812");
+            lh.Return(b1);
+            lh.BorrowBook(b1, "2220099");
         }
     }
 }

@@ -1,23 +1,16 @@
-﻿namespace Vektorel.Libraries.Models
+﻿using Vektorel.Libraries.Models;
+
+namespace Vektorel.Libraries.Abstractions
 {
-    public class Book
+    public abstract class Book
     {
         public int PageCount { get; set; }
         public string Title { get; set; }
         public Author Author { get; set; }
 
-        public string GetIntroduction()
+        public virtual string GetIntroduction()
         {
             return $"{Author.Name} kaleminden yazılan {Title} kitabı {PageCount} sayfadır";
         }
-    }
-
-    public class Author
-    {
-        public Author(string name)
-        {
-            Name = name;
-        }
-        public string Name { get; }
     }
 }

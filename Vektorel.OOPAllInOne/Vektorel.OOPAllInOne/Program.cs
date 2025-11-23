@@ -1,4 +1,5 @@
-﻿using Vektorel.Libraries.Models;
+﻿using Vektorel.Libraries.Helpers;
+using Vektorel.Libraries.Models;
 
 namespace Vektorel.OOPAllInOne
 {
@@ -6,6 +7,8 @@ namespace Vektorel.OOPAllInOne
     {
         static void Main(string[] args)
         {
+            var lh = new LibraryHelper();
+
             var a1 = new Author("Fyodor Dostoyevski");
             var a2 = new Author("Franz Kafka");
             var a3 = new Author("Astrid Lindgren");
@@ -27,9 +30,11 @@ namespace Vektorel.OOPAllInOne
             b3.PageCount = 26;
             b3.Author = a3;
 
-            Console.WriteLine(b1.GetIntroduction());
-            Console.WriteLine(b2.GetIntroduction());
-            Console.WriteLine(b3.GetIntroduction());
+            lh.Add(b1);
+            lh.Add(b2);
+            lh.Add(b3);
+
+            lh.GetAllInformations();
         }
     }
 }
